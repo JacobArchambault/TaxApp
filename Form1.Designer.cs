@@ -32,6 +32,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.lblTaxPercent = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -56,7 +57,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 116);
+            this.label3.Location = new System.Drawing.Point(12, 117);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(189, 29);
             this.label3.TabIndex = 2;
@@ -71,12 +72,25 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Total Due:";
             // 
+            // lblTaxPercent
+            // 
+            this.lblTaxPercent.AutoSize = true;
+            this.lblTaxPercent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(192)))));
+            this.lblTaxPercent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblTaxPercent.ForeColor = System.Drawing.Color.LightBlue;
+            this.lblTaxPercent.Location = new System.Drawing.Point(207, 117);
+            this.lblTaxPercent.Name = "lblTaxPercent";
+            this.lblTaxPercent.Size = new System.Drawing.Size(71, 29);
+            this.lblTaxPercent.TabIndex = 4;
+            this.lblTaxPercent.Text = "7.5%";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(298, 244);
+            this.Controls.Add(this.lblTaxPercent);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -96,6 +110,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblTaxPercent;
     }
 }
 
