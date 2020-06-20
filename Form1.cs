@@ -34,11 +34,8 @@ namespace TaxApp
         }
         private double GetPercentAsDecimal(string inValue)
         {
-            if (inValue[^1].Equals('%'))
-            {
-                inValue = inValue.Remove(inValue.Length - 1, 1);
-            }
-            return double.Parse(inValue) / 100;
+            string percentage = (inValue[^1].Equals('%')) ? inValue.Remove(inValue.Length - 1, 1) : inValue;
+            return double.Parse(percentage) / 100;
         }
         private double GetDouble(TextBox fromTextBox)
         {
