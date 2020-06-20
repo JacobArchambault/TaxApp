@@ -17,5 +17,46 @@ namespace TaxApp
             InitializeComponent();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Get purchase amount from txtPurchase textbox object.
+            double purchaseAmt = GetDouble(txtPurchase);
+
+            // Get tax percentage value from its label element
+            double percent = GetPercentAsDecimal(lblTaxPercent.Text);
+
+            // multiply base value by percentage
+            double ans = GetTotalWithTax(purchaseAmt, percent);
+
+            // Display the total as a string.
+            txtTotalDue.Text = string.Format($"{ans:C}");
+            // return result
+        }
+        private double GetPercentAsDecimal(string inValue)
+        {
+            if (inValue[^1].Equals('%'))
+            {
+                inValue = inValue.Remove(inValue.Length - 1, 1);
+            }
+            return double.Parse(inValue) / 100;
+        }
+        private double GetDouble(TextBox fromTextBox)
+        {
+            double purchaseAmt;
+            // Ensure user enters a number
+            while (double.TryParse(fromTextBox.Text, out purchaseAmt) == false)
+            {
+                MessageBox.Show("You must enter a number");
+                // Reset text
+                fromTextBox.Text = "0.0";
+                fromTextBox.Focus();
+            }
+            return purchaseAmt;
+
+        }
+        private double GetTotalWithTax(double baseAmount, double taxPercentageAsDecimal)
+        {
+            return (baseAmount * taxPercentageAsDecimal) + baseAmount;
+        }
     }
 }

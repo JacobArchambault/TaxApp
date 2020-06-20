@@ -35,6 +35,7 @@
             this.lblTaxPercent = new System.Windows.Forms.Label();
             this.txtPurchase = new System.Windows.Forms.TextBox();
             this.txtTotalDue = new System.Windows.Forms.TextBox();
+            this.btnCompute = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -103,12 +104,26 @@
             this.txtTotalDue.TabIndex = 6;
             this.txtTotalDue.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // btnCompute
+            // 
+            this.btnCompute.BackColor = System.Drawing.Color.Navy;
+            this.btnCompute.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCompute.ForeColor = System.Drawing.Color.Yellow;
+            this.btnCompute.Location = new System.Drawing.Point(77, 229);
+            this.btnCompute.Name = "btnCompute";
+            this.btnCompute.Size = new System.Drawing.Size(146, 53);
+            this.btnCompute.TabIndex = 2;
+            this.btnCompute.Text = "Compute";
+            this.btnCompute.UseVisualStyleBackColor = false;
+            this.btnCompute.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.ClientSize = new System.Drawing.Size(298, 244);
+            this.ClientSize = new System.Drawing.Size(298, 294);
+            this.Controls.Add(this.btnCompute);
             this.Controls.Add(this.txtTotalDue);
             this.Controls.Add(this.txtPurchase);
             this.Controls.Add(this.lblTaxPercent);
@@ -135,6 +150,7 @@
         private System.Windows.Forms.TextBox txtPurchase;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox txtTotalDue;
+        private System.Windows.Forms.Button btnCompute;
     }
 }
 
