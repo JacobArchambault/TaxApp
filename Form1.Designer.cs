@@ -33,6 +33,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblTaxPercent = new System.Windows.Forms.Label();
+            this.txtPurchase = new System.Windows.Forms.TextBox();
+            this.txtTotalDue = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -84,12 +86,31 @@
             this.lblTaxPercent.TabIndex = 4;
             this.lblTaxPercent.Text = "7.5%";
             // 
+            // txtPurchase
+            // 
+            this.txtPurchase.Location = new System.Drawing.Point(179, 56);
+            this.txtPurchase.Name = "txtPurchase";
+            this.txtPurchase.Size = new System.Drawing.Size(107, 35);
+            this.txtPurchase.TabIndex = 1;
+            this.txtPurchase.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtTotalDue
+            // 
+            this.txtTotalDue.Enabled = false;
+            this.txtTotalDue.Location = new System.Drawing.Point(136, 166);
+            this.txtTotalDue.Name = "txtTotalDue";
+            this.txtTotalDue.Size = new System.Drawing.Size(150, 35);
+            this.txtTotalDue.TabIndex = 6;
+            this.txtTotalDue.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(298, 244);
+            this.Controls.Add(this.txtTotalDue);
+            this.Controls.Add(this.txtPurchase);
             this.Controls.Add(this.lblTaxPercent);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -111,6 +132,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblTaxPercent;
+        private System.Windows.Forms.TextBox txtPurchase;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtTotalDue;
     }
 }
 
